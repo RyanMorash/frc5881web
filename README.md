@@ -32,7 +32,7 @@ author: alextopher
 Hello world!
 ```
 
-The author-field is configured by editing the [data/authors.yml](data/authors.yml) file. If you're posting blog posts
+The author-field is configured by editing the [data/authors.yml](data/authors.yml) file. If you're posting blog posts you should add yourself to the authors file.
 
 ```yaml
 alextopher:
@@ -54,3 +54,7 @@ Every season the business team should evaluate this page and update it to encour
 ### About Us
 
 Introduction about TVHS, FIRST Robotics Competition, and our team.
+
+## Hosting
+
+At the moment this website is being hosted by our mentor @Alextopher. He will redeploy it as often as necessary.

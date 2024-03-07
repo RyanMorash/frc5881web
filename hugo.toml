@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://frc.mahoney.best/'
 languageCode = 'en-us'
 title = 'TVHS Dragons : FRC 5881'
 theme = 'dot-org-hugo-theme'

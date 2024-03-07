@@ -21,3 +21,7 @@ Tech Valley High School (TVHS) is a four-year regional public high school that i
 The mission of Tech Valley High is to provide a unique, innovative and student-centered educational opportunity, engage students in current and emerging technologies and support the growth and economy of the region.
 
 Learn more at <https://www.techvalleyhigh.org/>
+
+## Contact Us
+
+If you have any questions about our team, please reach out to our math teacher and lead mentor, Varada Vaughan -- <vvaughan@techvalleyhigh.org>

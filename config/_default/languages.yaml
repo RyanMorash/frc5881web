@@ -9,10 +9,10 @@ en:
     description: "Tech Valley High School Dragons : First Robotics Competition Team 5881"
     main_cta:
       text: "Donate"
-      link: "/support/"
+      link: "https://www.paypal.com/donate?token=6K0hnON1kZb1yrAJv-cmf41EUifidEB3k-vaxIzG-lyGvHivPGHAEfj2Dtl5b8Et00QLFloZbPndFOzU"
     footer_cta:
       text: "Donate"
-      link: "/support/"
+      link: "https://www.paypal.com/donate?token=6K0hnON1kZb1yrAJv-cmf41EUifidEB3k-vaxIzG-lyGvHivPGHAEfj2Dtl5b8Et00QLFloZbPndFOzU"
     github_edit: "Edit this page on GitHub"
 
   menu:
@@ -22,29 +22,17 @@ en:
       url: "/about/"
       weight: 1
 
-    - identifier: "resources"
-      name: "Resources"
-      url: "/resources/"
-      weight: 2
-
-    - identifier: "2023"
-      name: "FRC 2023 - CHARGED UP"
-      url: "/resources"
-      weight: 1
-      post: "Robot Code and CAD"
-      parent: "resources"
-
     - identifier: "sponsors"
       name: "Sponsors"
       url: "/sponsors/"
-      weight: 3
+      weight: 2
 
     - identifier: "support"
       name: "Support"
       url: "/support/"
-      weight: 4
+      weight: 3
 
     - identifier: "blog"
       name: "Blog"
       url: "/blog/"
-      weight: 5
+      weight: 4

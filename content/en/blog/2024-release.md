@@ -1,6 +1,5 @@
 ---
 title: "2024 Game Released!"
-description: ""
 date: 2024-01-06
 author: alextopher
 ---

@@ -10,8 +10,9 @@ Tokyo Electron
 
 IBM
 
-Haas
+The Gene Haas Foundation
+
+Metroland Business Machines
 
 Tech Valley High School Foundation Board
-
 {{< /intro >}}

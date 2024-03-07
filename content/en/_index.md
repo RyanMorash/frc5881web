@@ -5,5 +5,5 @@ showHeader: true
 ---
 
 {{< intro >}}
-Tech Valley High School’s FIRST robotics team
+Tech Valley High School’s FIRST Robotics Competition Team
 {{< /intro >}}

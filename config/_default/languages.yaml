@@ -29,7 +29,7 @@ en:
 
     - identifier: "2023"
       name: "FRC 2023 - CHARGED UP"
-      url: "/resources#2023"
+      url: "/resources"
       weight: 1
       post: "Robot Code and CAD"
       parent: "resources"

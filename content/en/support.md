@@ -3,7 +3,7 @@ title: Support
 description: Contribute to the TVHS Dragons
 ---
 
-Participation in FIRST is not only demanding, invigorating and fun, but financially challenging as well. The Dragons are not funded by FIRST or any school, so we depend on the generous support of corporate sponsors, local businesses and private contributions. Our annual fund raising goal is $20,000
+Participation in FIRST is not only demanding, invigorating and fun, but financially challenging as well. The Dragons are not funded by FIRST or any school, so we depend on the generous support of corporate sponsors, local businesses and private contributions. Our annual fund raising goal is $20,000.
 
 ## Financial
 

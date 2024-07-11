@@ -3,16 +3,27 @@ title: 2024 Sponsors
 description:
 ---
 
-{{< intro >}}
-Special thanks to these amazing contributors!
+<!-- {{< intro >}}
+{{< /intro >}} -->
 
-Tokyo Electron
+## Special thanks to these amazing contributors
 
-IBM
+### Tokyo Electron
 
-The Gene Haas Foundation
+![Tokyo Electron Logo](/img/sponsors/TEL.png)
 
-Metroland Business Machines
+### IBM
 
-Tech Valley High School Foundation Board
-{{< /intro >}}
+![IBM Logo](/img/sponsors/IBM.jpg)
+
+### The Gene Haas Foundation
+
+![Gene Haas Foundation Logo](/img/sponsors/haas.png)
+
+### Metroland Business Machines
+
+![Metroland Business Machines Logo](/img/sponsors/mbm.jpg)
+
+### Tech Valley High School Foundation Board
+
+![Tech Valley High School Logo](/img/sponsors/tvhs.svg)

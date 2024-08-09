@@ -7,8 +7,3 @@ services:
     environment:
       VIRTUAL_HOST: frc.mahoney.best, tvhsfrc.org
       LETSENCRYPT_HOST: frc.mahoney.best, tvhsfrc.org
-
-networks:
-  default:
-    name: nginx
-    external: true

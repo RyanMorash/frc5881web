@@ -1,12 +1,3 @@
 module.exports = {
-    plugins: [
-      require("autoprefixer")({
-        overrideBrowserslist: ["> 0.5% in US"]
-      })
-    ]
-  };
-
-  
-
-  
-  
+  "browserslist": [">0.3%", "not dead", "not op_mini all"]
+}

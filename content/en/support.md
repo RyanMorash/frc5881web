@@ -32,7 +32,6 @@ Robots are very complicated pieces of machinery and a FIRST team needs a lot to 
 - Hardware (bolts, nuts, washers, screws, rivets, etc.)
 - Lexan and Polycarbonate
 - PLA and 3D printer filaments
-- 3D printer repair parts
 - Food or beverage donations
 
 {{< /column >}}

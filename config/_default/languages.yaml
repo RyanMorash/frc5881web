@@ -9,10 +9,10 @@ en:
     description: "Tech Valley High School Dragons : First Robotics Competition Team 5881"
     main_cta:
       text: "Donate"
-      link: "https://www.paypal.com/paypalme/tvhsfoundation"
+      link: "/support/#financial"
     footer_cta:
       text: "Donate"
-      link: "https://www.paypal.com/paypalme/tvhsfoundation"
+      link: "/support/#financial"
     github_edit: "Edit this page on GitHub"
 
   menu:

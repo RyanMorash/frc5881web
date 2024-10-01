@@ -5,18 +5,20 @@ description: Contribute to the TVHS Dragons
 
 Participation in FIRST is not only demanding, invigorating and fun, but financially challenging as well. The Dragons are not funded by FIRST or any school, so we depend on the generous support of corporate sponsors, local businesses and private contributions. Our annual fund raising goal is $20,000.
 
+<!-- markdownlint-disable MD033 -->
+<a name="Financial"></a>
+
 ## Financial
 
-Choose a level that is right for you. In addition to knowing you're helping kids do great things, you contribution will be recognized in the following ways.
+Our team is committed to providing a high-quality experience for our students, and **never charging dues or fees to participate**. We rely on the generosity of sponsors to help us cover the costs of registration fees, travel expenses, and materials. If you are interested in supporting the Dragons financially, please consider making a donation.
 
-| Recognition | Platinum $5000 | Gold $2500 | Bronze $1000 | Dragon $250 | Friend < $250 |
-|-------------|----------------|------------|--------------|-------------|---------------|
-| Team pin                                              | X | X | X | X | X |
-| Team T-shirt                                          | X | X | X | X |   |
-| Personal tour of pit area at competitions             | X | X | X | X |   |
-| Business name/logo displayed in pit area              | X | X | X |   |   |
-| Business name/logo displayed on robot                 | X | X |   |   |   |
-| Robot demonstration at business location by request   | X |   |   |   |   |
+Donations can be made via PayPal to the Tech Valley High School Foundation, a 501(c)(3) non-profit organization. Please note that your donation is for the TVHS Dragons Robotics Team. If you would like to make a larger donation, or donate by check, please contact our math teacher Varada Vaughan -- <vvaughan@techvalleyhigh.org>.
+
+<!-- markdownlint-disable MD034 -->
+{{< button style="tertiary" link="https://www.paypal.com/paypalme/tvhsfoundation" text="Donate on PayPal" >}}
+<!-- markdownlint-enable MD034 -->
+
+[![PayPal Instructions](/img/paypal.png)](https://www.paypal.com/paypalme/tvhsfoundation)
 
 ## Materials, Tools or Services
 

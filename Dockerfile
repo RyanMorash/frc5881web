@@ -5,7 +5,7 @@ RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/c
 RUN npm install -g postcss postcss-cli autoprefixer
 
 WORKDIR /app
-COPY ./ /src
+COPY . .
 
 RUN hugo --environment production
 

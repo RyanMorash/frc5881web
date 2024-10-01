@@ -1,4 +1,4 @@
-FROM alpine as build
+FROM alpine AS build
 
 RUN apk add --no-cache --update wget tzdata nodejs npm
 RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo

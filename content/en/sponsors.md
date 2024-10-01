@@ -1,10 +1,8 @@
 ---
 title: 2024 Sponsors
-description:
 ---
 
-<!-- {{< intro >}}
-{{< /intro >}} -->
+We are grateful for the support of our sponsors, without whom our team could not exist. If you are interested in supporting the TVHS Dragons, please visit our [Support](/support) page.
 
 ## Special thanks to these amazing contributors
 

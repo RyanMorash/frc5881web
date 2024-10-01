@@ -8,7 +8,7 @@ timeZone: "America/New_York"
 
 ######################## i18n ####################
 # Auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
-hasCJKLanguage: true
+hasCJKLanguage: false
 # Set default content directory for multilingual
 contentDir: content/en/
 # Set fallback if international version is not available

@@ -2,6 +2,9 @@ backend:
   name: github
   repo: ryanmorash/FRC5881web
   branch: cloudflare # Branch to update (optional; defaults to master)
+  site_domain: https://frc5881.pages.dev
+  base_url: https://frc5881.pages.dev
+  auth_endpoint: /api/auth
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow

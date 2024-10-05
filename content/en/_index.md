@@ -1,6 +1,5 @@
 ---
 title: TVHS Dragons
-description: 
 showHeader: true
 ---
 

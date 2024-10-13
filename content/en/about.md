@@ -24,4 +24,4 @@ Learn more at <https://www.techvalleyhigh.org/>
 
 ## Contact Us
 
-If you have any questions about our team, please contact, Varada Vaughan -- <vvaughan@techvalleyhigh.org>
+If you have any questions about our team, please email us: -- <team5881@techvalleyhigh.org>

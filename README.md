@@ -6,15 +6,14 @@ This is the repository for the website of FRC 5881, the TVHS Dragons. The websit
 
 The website is organized into the following pages:
 
-- Home
 - Blog
 - Sponsors
 - About Us
 - Support
 
-### Home
+### About Us
 
-The home page is simply an index to quickly navigate to the other pages. We shouldn't really put any content here.
+Introduction about TVHS, FIRST Robotics Competition, and our team. Currently serves as our home page.
 
 ### Blog
 
@@ -51,10 +50,6 @@ Information on how to support the team. Either financially or through donations 
 
 Every season the business team should evaluate this page and update it to encourage more support.
 
-### About Us
-
-Introduction about TVHS, FIRST Robotics Competition, and our team.
-
 ## Hosting
 
-At the moment this website is being hosted by our mentor @Alextopher. He will redeploy it as often as necessary.
+At the moment this website is being hosted by our mentor @Alextopher. Changes pushed to the `main` branch are automatically deployed using github actions.

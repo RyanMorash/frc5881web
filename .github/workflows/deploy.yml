@@ -1,0 +1,46 @@
+name: Build and Deploy Docker to VPS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Build the Docker image
+      run: docker build --tag tvhsfrc:latest .
+
+    - name: Save Docker image to file
+      run: |
+        docker save tvhsfrc:latest -o image.tar
+        chmod 644 image.tar
+
+    - name: Upload Docker image to VPS
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        source: ./image.tar
+        target: ~/tvhsfrc
+
+    - name: Deploy!
+      uses: appleboy/ssh-action@v1.1.0
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        script: |
+          docker load -i ~/tvhsfrc/image.tar
+          docker stop tvhsfrc || true
+          docker rm tvhsfrc || true
+          docker run -d --name tvhsfrc -p 8000:80 tvhsfrc:latest

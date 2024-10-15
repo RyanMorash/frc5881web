@@ -1,0 +1,25 @@
+name: Remove PR Preview from VPS
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  remove-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set Padded PR Number
+      id: padded_number
+      run: echo "PADDED_NUMBER=$(printf "%03d" ${{ github.event.number }})" >> $GITHUB_ENV
+
+    - name: Remove Docker container for PR
+      uses: appleboy/ssh-action@v1.1.0
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        script: |
+          docker stop tvhsfrc-preview-${{ env.PADDED_NUMBER }} || true
+          docker system prune -f

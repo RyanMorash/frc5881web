@@ -1,9 +1,0 @@
-services:
-  web:
-    build: .
-    restart: unless-stopped
-    ports:
-      - 4460:80
-    environment:
-      VIRTUAL_HOST: frc.mahoney.best, tvhsfrc.org
-      LETSENCRYPT_HOST: frc.mahoney.best, tvhsfrc.org

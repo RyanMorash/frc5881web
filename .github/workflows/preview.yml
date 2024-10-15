@@ -1,0 +1,64 @@
+name: Deploy PR Preview to VPS
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Set Padded PR Number
+      id: padded_number
+      run: echo "PADDED_NUMBER=$(printf "%03d" ${{ github.event.number }})" >> $GITHUB_ENV
+
+    - name: Build Docker image for PR
+      run: |
+        docker build --build-arg HUGO_BASEURL="https://frc.mahoney.best/pr/${{ env.PADDED_NUMBER }}" -t tvhsfrc-preview:${{ env.PADDED_NUMBER }} .
+
+    - name: Save Docker image to file
+      run: |
+        docker save tvhsfrc-preview:${{ env.PADDED_NUMBER }} -o image-preview.tar
+        chmod 644 image-preview.tar
+
+    - name: Upload Docker image to VPS
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        source: ./image-preview.tar
+        target: ~/tvhsfrc-preview-${{ env.PADDED_NUMBER }}
+
+    - name: Deploy Docker container on VPS
+      uses: appleboy/ssh-action@v1.1.0
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        script: |
+          docker load -i ~/tvhsfrc-preview-${{ env.PADDED_NUMBER }}/image-preview.tar
+          docker stop tvhsfrc-preview-${{ env.PADDED_NUMBER }} || true
+          docker rm tvhsfrc-preview-${{ env.PADDED_NUMBER }} || true
+          docker run -d --name tvhsfrc-preview-${{ env.PADDED_NUMBER }} -p $((9000 + ${{ github.event.number }})):80 tvhsfrc-preview:${{ env.PADDED_NUMBER }}
+
+    - name: Comment on PR with Preview URL
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const prNumber = context.payload.pull_request.number;
+          const paddedNumber = process.env.PADDED_NUMBER;
+          const previewUrl = `https://frc.mahoney.best/pr/${paddedNumber}/`;
+          github.rest.issues.createComment({
+            issue_number: prNumber,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `🚀 Your PR preview has been deployed! [View it here!](${previewUrl})`
+          });

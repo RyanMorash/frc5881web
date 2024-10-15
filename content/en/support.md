@@ -54,4 +54,4 @@ Robots are very complicated pieces of machinery and a FIRST team needs a lot to 
 
 ## Mentoring
 
-Our team is small and we are always looking for more technical help! If you're a local mechanical, electrical or software engineer and are interested in volunteering, please reach out to our math teacher Varada Vaughan -- <vvaughan@techvalleyhigh.org>
+Our team is small and we are always looking for more technical help! If you're a local mechanical, electrical, or software engineer and are interested in volunteering, please contact us at -- <team5881@techvalleyhigh.org>.

@@ -1,3 +1,5 @@
+[![Deployed](https://github.com/FRC5881/web/actions/workflows/deploy.yml/badge.svg)](https://github.com/FRC5881/web/actions/workflows/deploy.yml)
+
 # 5881 Website
 
 This is the repository for the website of FRC 5881, the TVHS Dragons. The website is built using [Hugo](https://gohugo.io/), a static site generator. We're using the [dot-org](https://themes.gohugo.io/themes/dot-org-hugo-theme/) theme.

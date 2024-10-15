@@ -12,7 +12,7 @@ Participation in FIRST is not only demanding, invigorating and fun, but financia
 
 Our team is committed to providing a high-quality experience for our students, and **never charging dues or fees to participate**. We rely on the generosity of sponsors to help us cover the costs of registration fees, travel expenses, and materials. If you are interested in supporting the Dragons financially, please consider making a donation.
 
-Donations can be made via PayPal to the Tech Valley High School Foundation, a 501(c)(3) non-profit organization. Please note that your donation is for the TVHS Dragons Robotics Team. If you would like to make a larger donation, or donate by check, please contact our math teacher Varada Vaughan -- <vvaughan@techvalleyhigh.org>.
+Donations can be made via PayPal to the Tech Valley High School Foundation, a 501(c)(3) non-profit organization. Please note that your donation is for the TVHS Dragons Robotics Team. If you would like to make a larger donation, or donate by check, please contact us at -- <team5881@techvalleyhigh.org>.
 
 <!-- markdownlint-disable MD034 -->
 {{< button style="tertiary" link="https://www.paypal.com/paypalme/tvhsfoundation" text="Donate on PayPal" >}}

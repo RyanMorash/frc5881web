@@ -10,20 +10,26 @@ COPY . .
 # Hugo base url
 ARG HUGO_BASEURL="https://tvhsfrc.org"
 
-RUN HUGO_BASEURL=$HUGO_BASEURL hugo --environment production
+RUN hugo --environment production
 
-RUN find public -type f -name "*.html" -exec sed -i "s|src=.*/img/dragons.png|src=\"/img/dragons.png|g" {} \;
-RUN find public -type f -name "*.html" -exec sed -i "s|src=.*/img/logo.png|src=\"/img/logo.png|g" {} \;
-RUN find public -type f -name "*.html" -exec sed -i "s|class=\"logo-link\" href=\".*\"|class=\"logo-link\" href=\"$HUGO_BASEURL\"|g" {} \;
-RUN find public -type f -name "*.html" -exec sed -i "s|href=.*/support|href=\"$HUGO_BASEURL/support|g" {} \;
+# Remove the entire BaseURL from all hrefs, srcs, and urls.
+RUN find public -type f \( -name "*.html" -o -name "*.css" \) -print -exec sed -i "s|$HUGO_BASEURL||g" {} \;
+# Extract the _path_ from the Base URL, `https://example.com/some/path` -> `/some/path`
+RUN HUGO_BASEURL_PATH=$(echo $HUGO_BASEURL | sed -n 's|https://[^/]*\(.*\)|\1|p') && \
+    echo $HUGO_BASEURL_PATH && \
+    find public -type f \( -name "*.html" -o -name "*.css" \) -print -exec sed -i "s|$HUGO_BASEURL_PATH||g" {} \;
+# Extract the scheme and domain from the Base URL, `https://example.com/path/` -> `https://example.com`
+RUN HUGO_BASEURL_SCHEME_DOMAIN=$(echo $HUGO_BASEURL | sed -n 's|\(https://[^/]*\).*|\1|p') && \
+    echo $HUGO_BASEURL_SCHEME_DOMAIN && \
+    find public -type f \( -name "*.html" -o -name "*.css" \) -print -exec sed -i "s|$HUGO_BASEURL_SCHEME_DOMAIN||g" {} \;
 
-RUN find public -type f -name "*.html" -exec sed -i "s|src=\"/img|src=\"$HUGO_BASEURL/img|g" {} \;
-RUN find public -type f -name "*.html" -exec sed -i "s|href=\"/css|href=\"$HUGO_BASEURL/css|g" {} \;
-RUN find public -type f -name "*.html" -exec sed -i "s|src=\"/js|src=\"$HUGO_BASEURL/js|g" {} \;
-RUN find public -type f -name "*.html" -exec sed -i "s|href=\"/fonts|href=\"$HUGO_BASEURL/fonts|g" {} \;
+# Add back the BaseURL to all hrefs, srcs, and urls
+RUN find public -type f \( -name "*.html" -o -name "*.css" \) -exec sed -i "s|href=\"/|href=\"$HUGO_BASEURL/|g" {} \;
+RUN find public -type f \( -name "*.html" -o -name "*.css" \) -exec sed -i "s|src=\"/|src=\"$HUGO_BASEURL/|g" {} \;
+RUN find public -type f \( -name "*.html" -o -name "*.css" \) -exec sed -i "s|url(\"/|url(\"$HUGO_BASEURL/|g" {} \;
 
-RUN find public -type f -name "*.css" -exec sed -i "s|url(/img|url($HUGO_BASEURL/img|g" {} \;
-RUN find public -type f -name "*.css" -exec sed -i "s|url(/fonts|url($HUGO_BASEURL/fonts|g" {} \;
+# Remove integrity attributes from script and link tags
+RUN find public -type f -name "*.html" -exec sed -i "s| integrity=\"[^\"]*\"||g" {} \;
 
 FROM nginx:alpine
 

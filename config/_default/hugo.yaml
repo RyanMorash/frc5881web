@@ -23,3 +23,10 @@ privacy:
     privacyEnhanced: true
   vimeo:
     enableDNT: true
+
+
+# Needed for the theme to work
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
